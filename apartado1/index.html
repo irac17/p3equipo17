@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Dash.js IRAC</title>
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <style>
+        video {
+            width: 640px;
+            height: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Equipo 17 Dash.js</p>
+    <div class="code">
+        <video class="dashjs-player" autoplay controls preload="auto"> <source src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd" type="application/dash+xml"/>
+    </video>
+    </div>
+</body>
+
+</html>
+<script>
+    var player;
+    document.addEventListener("DOMContentLoaded", function () {
+        init();
+    });
+    function init() {
+        player = dashjs.MediaPlayerFactory.create( document.querySelector(".dashjs-player"));
+    };
+</script>
